@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+        rel="stylesheet">
+        
+</head>
+
+<body>
+
+    <form method="GET" enctype="application/x-www-form-urlencoded" action="/crear.html">
+
+        <div class="mx-5 mt-3 my-3 p-3 border border-danger">
+            <p class="mx-4">
+                <label>Nombre
+                    <input class="mt-3 border-black" type="text" name="nombre_cliente" required>
+                </label>
+            </p>
+
+            <p class="mx-5">
+                <label>Email
+                    <input class="mt-3 border-black" type="email" name="direccion_correo" required>
+                </label>
+            </p>
+
+            <p class="mx-4">
+                <label>Telefono
+                    <input class="mt-3 border-black" type="telefono" name="numero_telefono" required>
+                </label>
+            </p>
+        </div>
+
+        <div class="mx-5 my-3 p-5 border border-danger">
+            <fieldset>
+                <legend class="mx-left mx-5">Que Taxi Necesita</legend>
+                <p class="w-80 h-5 mx-left mx-10 mt-5">
+                    <label>
+                        <input type="radio" name="taxi" required valued="car">
+                        Carrito
+                    </label>
+                </p>
+
+                <p class="w-80 h-5 mx-left mx-10 mt-5">
+                    <label>
+                        <input type="radio" name="taxi" required valued="van">
+                        Suv
+                    </label>
+                </p>
+
+                <p class="w-80 h-5 mx-left mx-10 mt-5">
+                    <label>
+                        <input type="radio" name="taxi" required valued="tuktuk">
+                        Tuk Tuk
+                    </label>
+                </p>
+            </fieldset>
+        </div>
+
+        <div class="mx-5 my-3 p-5 border border-danger">
+            <fieldset>
+                <legend class="mx-left mx-12">Extras</legend>
+                <p class="w-80 h-5 mx-left mx-5 mt-5">
+                    <label>
+                        <input type="checkbox" name="extras" id="baby">
+                        Silla de Bebe
+                    </label>
+                </p>
+
+                <p class="w-80 h-5 mx-left mx-5 mt-5">
+                    <label>
+                        <input class="mt-3 border-black" type="checkbox" name="extras" id="musica">
+                        No Reggaeton
+                    </label>
+                </p>
+
+                <p class="w-80 h-5 mx-left mx-5 mt-5">
+                    <label>
+                        <input type="checkbox" name="extras" id="sillaruedas">
+                        Silla de Ruedas
+                    </label>
+                </p>
+            </fieldset>
+        </div>
+
+        <div class="mx-5 my-3 p-5 border border-danger">
+            <p>
+                <label>Dia y Hora
+                    <input class="border border-black w-3/4" type="datetime-local" name="fecha_hora" required>
+                </label>
+            </p>
+
+            <p class="w-80 ml-1 mx-left mx-2 mt-5">
+                <label>Lugar Para Recoger
+                    <select class="border border-black w-40" id="pickup_place" name="pickup_place">
+                        <option value="" selected="selected">Seleccione Opcion</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="Feria">Feria</option>
+                        <option value="La_U">La Universidad</option>
+                        <option value="no_se">Mas tarde XD</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label>Dejar en:
+                    <input class=" border border-black w-40 mx-left mx-30 mt-5" type="text" name="dejar_en" required
+                        list="destino">
+                </label>
+                <datalist id="destino">
+                    <option value="Aereopuerto"></option>
+                    <option value="Playa"></option>
+                    <option value="La Biblioteca"></option>
+                </datalist>
+            </p>
+        </div>
+
+        <div>
+            <p class="mx-5 my-3 p-4">
+                <label>Instrucciones Especiales
+                    <textarea class="border-black form-control" name="comentarios" maxlength="500"></textarea>
+                </label>
+            </p>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <p>
+                <button class="w-40 btn-outline btn-lg">Hacer Cita</button>
+            </p>
+        </div>
+
+    </form>
+</body>
+
+</html>
